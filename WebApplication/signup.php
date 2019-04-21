@@ -113,7 +113,7 @@
 
 
                                     <input type="submit" value="Sign Up" class="button primary" />
-            
+                                    <a href="signin.php">Already have an account?</a>
                                 </form>
                 
                 </div>
