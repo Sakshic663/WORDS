@@ -1,20 +1,14 @@
     
 <?php
+include 'DatabaseConnection.php';
+$dbConnection = DatabaseConnection::getInstance()->getConnection();
+//require '../vendor/autoload.php';
     $error = "";
     $password = "";
     $confirmedPassword = "";
     $email = "";
     $username = "";
-    $host = "localhost";
-    $uname = "root";
-    $pwd = "";
-    $database = "connect_me";
-    $link = mysqli_connect($host, $uname, $pwd, $database);
-    if(mysqli_connect_error()){
-        exit("There was an error connecting to the database");
-    }else{
-        //echo "Database connection successful!";
-    }
+    
   if ($_POST){
     //! Checking if username field is empty
     if(!$_POST['username']){
@@ -50,6 +44,13 @@
     if($_POST['email'] && filter_var($_POST['email'],FILTER_VALIDATE_EMAIL) == false){
       $error .= "The email address is invalid.<br>";
       $email = "";
+    }else if ($_POST['email'] && filter_var($_POST['email'],FILTER_VALIDATE_EMAIL) == true){
+        $query = "SELECT * FROM users WHERE `email` = '".$_POST['email']."'";
+        if($rslt = mysqli_query($dbConnection, $query)) {
+            if (mysqli_num_rows($rslt)) {
+                $error .= "An account with the same email address already exists. <br>";
+             }
+        }
     }
     //! Displaying the error message if its not empty or executing main code if it is
     if($error != ""){
@@ -59,11 +60,10 @@
         $error = '<div class="signup-success" style="color:green;"><p>Sign Up Success!</p></div>';
         $password_hash = password_hash($password, PASSWORD_DEFAULT); //? Hashing the password
         $query = "INSERT INTO `users` (`email`, `password`, `username`) VALUES ('".$email."', '".$password_hash."', '".$username."')";
-        mysqli_query($link, $query);
+        mysqli_query($dbConnection, $query);
     }
   }
 ?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -71,7 +71,7 @@
     <meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
     
-    <title>ConnectMe - Sign Up</title>
+    <title>Register</title>
 	
     
     
@@ -85,31 +85,30 @@
            <div class="row">
             	<div class="medium-5 small-12 medium-offset-1 columns form-container">
 
-                                <h2>Sign Up to start browing</h2>
+                                <h2>Register</h2>
 
                                 <div class="err"><?php echo $error; ?></div>
 
                                 <form method="post">
-                                    <label>
-                                            Username
-                                            <input type="text" name="username" value="" placeholder="Your Username ..." /><br>
-                                            </label>
+                                    <!--<label>
+                                            Username-->
+                                            <input type="text" name="username" value="" placeholder="Enter username" /><br /><br />
+                                            <!--</label>-->
     
-                                        <label> 
-
+                                    <!--<label> 
                                     <label>
-                                        Your Email address
-                                        <input type="text" name="email" value="" placeholder="Your Email Address ..." /><br>
-                                    </label>
+                                        Your Email address-->
+                                        <input type="text" name="email" value="" placeholder="Enter email" /><br /><br />
+                                    <!--</label>
                                     
-                                        Your Password
-                                        <input type="password" name="password" value="" placeholder="Enter password ..." /><br>
-                                    </label>
+                                        Your Password-->
+                                        <input type="password" name="password" value="" placeholder="Enter password" /><br><br />
+                                    <!--</label>
 
                                     <label>
-                                            Confirm Password
-                                            <input type="password" name="confirmPassword" value="" placeholder="Confirm password ..." /><br>
-                                        </label>
+                                            Confirm Password-->
+                                            <input type="password" name="confirmPassword" value="" placeholder="Confirm password" /><br /><br />
+                                        <!--</label>-->
 
 
                                     <input type="submit" value="Sign Up" class="button primary" />
