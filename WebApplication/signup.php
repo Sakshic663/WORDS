@@ -72,12 +72,25 @@ $dbConnection = DatabaseConnection::getInstance()->getConnection();
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
     
     <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 	
     
     
 </head>
 
 <body class="inner-page">
+
+    <header class="header-basic">
+        <div class="header-limiter">
+            <h1><a href="#">ConnectMe</a></h1>
+            <nav>
+                <a href="#">About</a>
+                <a href="#">Login</a>
+                <a href="#">Register</a>
+                <a href="#">Dev Team</a>
+            </nav>
+        </div>
+    </header>
 	<!-- MAIN Container Start here. -->
 	<div class="container">
     
@@ -85,11 +98,12 @@ $dbConnection = DatabaseConnection::getInstance()->getConnection();
            <div class="row">
             	<div class="medium-5 small-12 medium-offset-1 columns form-container">
 
-                                <h2>Register</h2>
+                                <!--<h2>Register</h2>-->
 
                                 <div class="err"><?php echo $error; ?></div>
 
-                                <form method="post">
+                                <form method="post" id="app">
+                                    <h2>Register</h2>
                                     <!--<label>
                                             Username-->
                                             <input type="text" name="username" value="" placeholder="Enter username" /><br /><br />
@@ -111,7 +125,7 @@ $dbConnection = DatabaseConnection::getInstance()->getConnection();
                                         <!--</label>-->
 
 
-                                    <input type="submit" value="Sign Up" class="button primary" />
+                                    <input type="submit" value="Sign Up" class="button primary" /><br />
                                     <a href="signin.php">Already have an account?</a>
                                 </form>
                 
@@ -125,3 +139,5 @@ $dbConnection = DatabaseConnection::getInstance()->getConnection();
     
 </body>
 </html>
+
+
