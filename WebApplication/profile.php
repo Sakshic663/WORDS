@@ -9,8 +9,9 @@ session_start();
         $testerID = $_SESSION['email'];
     }
 $query = "SELECT * FROM posts;";
-
-$resultCheck = mysqli_num_rows($query);
+$result = mysqli_query($dbConnection, $query);
+$row = mysqli_fetch_array($result);
+$resultCheck = mysqli_num_rows($result);
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,5 +25,6 @@ $resultCheck = mysqli_num_rows($query);
 
 </a>
 <a href="logout.php" id="logout" class="button primary" title="SIGN OUT">SIGN OUT</a><br>
+
 </body>
 </html>
