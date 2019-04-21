@@ -1,4 +1,6 @@
 <?php
+include 'DatabaseConnection.php';
+session_start();
   $error = "";
   $password = "";
   $email = "";
@@ -29,33 +31,20 @@
       $error = '<div class="signin-error" style="color:red;"><strong>Error:</strong><br>'.$error.'</div>';
     }
     else{
-        $host = "localhost";
-        $uname = "root";
-        $pwd = "";
-        $database = "connect_me";
-        $link = mysqli_connect($host, $uname, $pwd, $database);
-        if(mysqli_connect_error()){
-            exit("There was an error connecting to the database");
-        }else{
-            //echo "Database connection successful!";
-        }
-        //? Generate the query command/code
+        $dbConnection = DatabaseConnection::getInstance()->getConnection();
         $query = "SELECT password FROM users WHERE `email` = '".$email."'";
-        //? Query the database
-        $result = mysqli_query($link, $query);
-        //? Get the row from database as an array
-        $row = mysqli_fetch_array($result);
-        //? Single out the hashed password from the row array
-        $hashed_password = $row['password'];
-        //echo "<br/>";
-        //echo $hashed_password;
-        if(password_verify($password, $hashed_password)) {
-            // If the password inputs matched the hashed password in the database
-            // Log them in.
-            echo "Login sucess!";
-        }else{
-            echo "Login failure!";
-        } 
+        if($result = mysqli_query($dbConnection, $query)){
+            $row = mysqli_fetch_array($result);
+            $hashed_password = $row['password'];
+            if(password_verify($password, $hashed_password)) {
+                $_SESSION['email'] = $email;
+                header("Location: profile.php");
+            }else{
+                $error = "Invalid email address or password combination OR unregistered account.";
+                $error = '<div class="signin-error" style="color:red;"><strong>Error:</strong><br>'.$error.'</div>';
+            }
+        }
+  
     }
   }
 ?>
