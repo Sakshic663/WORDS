@@ -1,0 +1,100 @@
+#app{
+    border: 2px solid #000; 
+    width: 20%;
+    height: 40%;
+    margin: auto;
+    margin-top: 10%;
+    text-align: center;
+    padding-bottom: 10px;
+    vertical-align: middle;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 3px;
+}
+
+#btnLogin{
+    border-radius: 2px;
+    border: 1px solid #000;
+}
+
+#btnLogout{
+    border-radius: 2px;
+    border: 1px solid #000;
+}
+
+#btnSignUp{
+    border-radius: 2px;
+    border: 1px solid #000;
+}
+
+.hide{
+    display: none;
+}
+
+.header-basic {
+    background-color: #1766e8;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
+    padding: 20px 40px;
+    height: 80px;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+}
+
+.header-basic .header-limiter {
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Logo */
+
+.header-basic .header-limiter h1 {
+    float: left;
+    line-height: 40px;
+    margin: 0;
+}
+
+.header-basic .header-limiter h1 span {
+    color: #5383d3;
+}
+
+/* The header links */
+
+.header-basic .header-limiter a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header-basic .header-limiter nav{
+    font-family: 'Inconsolata', monospace;
+    line-height: 40px;
+    float: right;
+}
+
+.header-basic .header-limiter nav a{
+    display: inline-block;
+    padding: 0 5px;
+    text-decoration:none;
+    color: #ffffff;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.header-basic .header-limiter nav a:hover{
+    background-color: #fff;
+    color: #1766e8;
+}
+
+.header-basic .header-limiter nav a.selected {
+    color: #608bd2;
+    pointer-events: none;
+    opacity: 1;
+}
+
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Inconsolata', monospace;
+}
+#txtEmail , #txtPassword{
+    border-radius: 2px;
+}
