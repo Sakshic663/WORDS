@@ -37,7 +37,9 @@
               $row = mysqli_fetch_array($result);
               $userID = $row['userId'];
               $query = "INSERT INTO `posts` (`name`,  `description`, `userId`) VALUES ('".$itemName."',  '".$itemDescription."', '".$userID."')";
-          }
+              mysqli_query($dbConnection, $query);
+              header('Location: ./profile.php');
+            }
     }
 ?>
 <!doctype html>
