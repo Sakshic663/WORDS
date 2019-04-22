@@ -29,9 +29,11 @@ $resultCheck = mysqli_num_rows($result);
         </div>
     </header>
 
-<a href="./create.php" class="btn">
-    <input type="button" value="Create Post" />
+<a href="./create.php">
+        <img src="./plus.png" class="btn">
+    <!--<input type="button" value="" class="btn"/>-->
 </a>
+
 <!--<a href="logout.php" id="logout" class="button primary" title="SIGN OUT">SIGN OUT</a><br>-->
 
 <?php
