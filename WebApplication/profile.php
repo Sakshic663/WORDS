@@ -25,6 +25,13 @@ $resultCheck = mysqli_num_rows($result);
 
 </a>
 <a href="logout.php" id="logout" class="button primary" title="SIGN OUT">SIGN OUT</a><br>
-
+<?php
+    if($resultCheck > 0){
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo $row['name'];
+            echo $row['description'] . "<br>";
+        }
+    }
+?>
 </body>
 </html>
