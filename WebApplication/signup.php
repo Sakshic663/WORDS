@@ -85,7 +85,7 @@ $dbConnection = DatabaseConnection::getInstance()->getConnection();
             <h1><a href="#">ConnectMe</a></h1>
             <nav>
                 <a href="#">About</a>
-                <a href="#">Login</a>
+                <a href="signin.php">Login</a>
                 <a href="#">Register</a>
                 <a href="#">Dev Team</a>
             </nav>

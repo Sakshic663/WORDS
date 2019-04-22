@@ -69,7 +69,7 @@ session_start();
             <nav>
                 <a href="#">About</a>
                 <a href="#">Login</a>
-                <a href="#">Register</a>
+                <a href="signup.php">Register</a>
                 <a href="#">Dev Team</a>
             </nav>
         </div>
