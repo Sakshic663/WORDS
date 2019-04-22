@@ -37,7 +37,7 @@
             $row = mysqli_fetch_array($result);
             $userID = $row['userId'];
             $query = "INSERT INTO `posts` (`name`,  `description`, `userId`) VALUES ('".$itemName."',  '".$itemDescription."', '".$userID."')";
-            
+           
         }
     }
 ?>
@@ -82,12 +82,18 @@
                 Item For Sale
                 <input maxlength="100" type="text" id="nameItem" name="itemName" value="" placeholder="Enter Item Name" />
             </label>
-            <label>
+             <label>
                 Description
                 <textarea name="itemDescription" placeholder="Brief Description" id="descriptionItem" rows="4" maxlength="200"></textarea>
             </label> <br>
             <input type="submit" id='postCreate' value="Create Post" class="button primary" />
         </form>
+
+                    
+
+                
+
+ 
 </body>
 
 </html>
