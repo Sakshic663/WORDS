@@ -14,7 +14,7 @@
    
     $itemDescription = "";
   
-    $error = "";P
+    $error = "";
     if ($_POST){
         if(!$_POST['itemName']){
           $error .= "A name for the item is required.<br>";

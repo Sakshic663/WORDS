@@ -117,3 +117,16 @@ body {
     margin-left: auto;
     margin-right: auto; 
 }
+#newpost {
+    border: 2px solid #7d8ca3;
+    border-radius: 3px;
+    margin-top: 10px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+}
+#createart {
+    padding-top: 23px;
+    padding-right: 20px;
+}

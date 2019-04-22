@@ -45,10 +45,10 @@ $resultCheck = mysqli_num_rows($result);
         <?php
             if($resultCheck > 0){
                 while ($row = mysqli_fetch_assoc($result)) {
-                    <tr>
-                        <td>echo $row['name'];</td>
-                        <td>echo $row['description'] . "<br>";</td>
-                    </tr>
+                    /*<tr>*/
+                        echo $row['name'];
+                        echo $row['description'] . "<br>";
+                    /*</tr>*/
                 }
             }
         ?>
