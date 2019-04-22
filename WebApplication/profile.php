@@ -39,17 +39,23 @@ $resultCheck = mysqli_num_rows($result);
 <div>
     <table>
         <tr>
+            <th colspan="2"><h2>Posts</h2></th>
+        </tr>
+        <t>
             <th>User</th>
             <th>Post</th>
-        </tr>
+        </t>
         <?php
             if($resultCheck > 0){
                 while ($row = mysqli_fetch_assoc($result)) {
-                    /*<tr>*/
-                        echo $row['name'];
-                        echo $row['description'] . "<br>";
-                    /*</tr>*/
+                    ?>
+                    <tr>
+                        <td><?php echo $row['name']; ?></td>
+                        <td><?php echo $row['description'] . "<br>"; ?></td>
+                    </tr>
+                <?php
                 }
+                ?>
             }
         ?>
     </table>
