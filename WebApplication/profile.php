@@ -17,14 +17,23 @@ $resultCheck = mysqli_num_rows($result);
 <html>
 <head>
 <title> Profile Page</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <header class="header-basic">
+        <div class="header-limiter">
+            <h1><a href="#">WORDS</a></h1>
+            <nav>
+                <a href="logout.php" id="logout" class="button primary" title="SIGN OUT">SIGN OUT</a>
+            </nav>
+        </div>
+    </header>
 
-<a href="./create.php">
+<a href="./create.php" class="btn">
     <input type="button" value="Create Post" />
-
 </a>
-<a href="logout.php" id="logout" class="button primary" title="SIGN OUT">SIGN OUT</a><br>
+<!--<a href="logout.php" id="logout" class="button primary" title="SIGN OUT">SIGN OUT</a><br>-->
+
 <?php
     if($resultCheck > 0){
         while ($row = mysqli_fetch_assoc($result)) {
