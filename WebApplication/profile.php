@@ -43,6 +43,7 @@ $resultCheck = mysqli_num_rows($result);
         
         <tr id = "tableHeader">
             <th>User</th>
+            <th>Post Name</th>
             <th>Post</th>
         </tr>
         <?php
@@ -50,7 +51,8 @@ $resultCheck = mysqli_num_rows($result);
                 while ($row = mysqli_fetch_assoc($result)) {
                     ?>
                     <tr>
-                        <td style="width: 20%;"><?php echo $row['name']; ?></td>
+                        <td style="width: 10%;"><?php echo $row['username']; ?></td>
+                        <td style="width: 70%;"><?php echo $row['name']; ?></td>
                         <td style="width: 80%;"><?php echo $row['description'] . "<br>"; ?></td>
                     </tr>
                 <?php
