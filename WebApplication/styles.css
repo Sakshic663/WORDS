@@ -98,3 +98,22 @@ body {
 #txtEmail , #txtPassword{
     border-radius: 2px;
 }
+.btn {
+    display: inline-block;
+    color: #fff;
+    font-size: 70px;
+    width: 90px;
+    height: 90px;
+    line-height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+    overflow: hidden;
+    transition: .4s;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;  
+    margin-left: auto;
+    margin-right: auto; 
+}

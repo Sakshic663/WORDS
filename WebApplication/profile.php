@@ -17,21 +17,42 @@ $resultCheck = mysqli_num_rows($result);
 <html>
 <head>
 <title> Profile Page</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <header class="header-basic">
+        <div class="header-limiter">
+            <h1><a href="#">WORDS</a></h1>
+            <nav>
+                <a href="logout.php" id="logout" class="button primary" title="SIGN OUT">SIGN OUT</a>
+            </nav>
+        </div>
+    </header>
 
 <a href="./create.php">
-    <input type="button" value="Create Post" />
-
+        <img src="./plus.png" class="btn">
+    <!--<input type="button" value="" class="btn"/>-->
 </a>
-<a href="logout.php" id="logout" class="button primary" title="SIGN OUT">SIGN OUT</a><br>
-<?php
-    if($resultCheck > 0){
-        while ($row = mysqli_fetch_assoc($result)) {
-            echo $row['name'];
-            echo $row['description'] . "<br>";
-        }
-    }
-?>
+
+<!--<a href="logout.php" id="logout" class="button primary" title="SIGN OUT">SIGN OUT</a><br>-->
+
+<div>
+    <table>
+        <tr>
+            <th>User</th>
+            <th>Post</th>
+        </tr>
+        <?php
+            if($resultCheck > 0){
+                while ($row = mysqli_fetch_assoc($result)) {
+                    <tr>
+                        <td>echo $row['name'];</td>
+                        <td>echo $row['description'] . "<br>";</td>
+                    </tr>
+                }
+            }
+        ?>
+    </table>
+</div>
 </body>
 </html>
