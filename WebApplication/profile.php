@@ -56,7 +56,8 @@ $resultCheck = mysqli_num_rows($result);
                 <?php
                 }
                 ?>
-            }
+            <?php
+        }
         ?>
     </table>
 </div>
