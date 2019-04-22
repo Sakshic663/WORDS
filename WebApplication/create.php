@@ -32,11 +32,12 @@
         if($error != ""){
             $error = '<div class="signin-error" style="color:red;"><strong>Error:</strong><br>'.$error.'</div>';
           }else{
-              $query = "SELECT userId FROM users WHERE `email` = '".$testerID."'";
+              $query = "SELECT * FROM users WHERE `email` = '".$testerID."'";
               $result = mysqli_query($dbConnection, $query);
               $row = mysqli_fetch_array($result);
               $userID = $row['userId'];
-              $query = "INSERT INTO `posts` (`name`,  `description`, `userId`) VALUES ('".$itemName."',  '".$itemDescription."', '".$userID."')";
+              $uname = $row['username'];
+              $query = "INSERT INTO `posts` (`name`,  `description`, `userId`, `username`) VALUES ('".$itemName."',  '".$itemDescription."', '".$userID."','".$uname."')";
               mysqli_query($dbConnection, $query);
               header('Location: ./profile.php');
             }
