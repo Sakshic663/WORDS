@@ -2,7 +2,7 @@
 <?php
 include 'DatabaseConnection.php';
 $dbConnection = DatabaseConnection::getInstance()->getConnection();
-//require '../vendor/autoload.php';
+
     $error = "";
     $password = "";
     $confirmedPassword = "";
@@ -57,10 +57,11 @@ $dbConnection = DatabaseConnection::getInstance()->getConnection();
       $error = '<div class="signup-error" style="color:red;"><strong>Error:</strong><br>'.$error.'</div>';
     }
     else{
-        $error = '<div class="signup-success" style="color:green;"><p>Sign Up Success!</p></div>';
+       // $error = '<div class="signup-success" style="color:green;"><p>Sign Up Success!</p></div>';
         $password_hash = password_hash($password, PASSWORD_DEFAULT); //? Hashing the password
         $query = "INSERT INTO `users` (`email`, `password`, `username`) VALUES ('".$email."', '".$password_hash."', '".$username."')";
         mysqli_query($dbConnection, $query);
+        header('Location: ./signin.php');
     }
   }
 ?>
