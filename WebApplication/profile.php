@@ -36,22 +36,22 @@ $resultCheck = mysqli_num_rows($result);
 
 <!--<a href="logout.php" id="logout" class="button primary" title="SIGN OUT">SIGN OUT</a><br>-->
 
+            <h2 style="text-align: center;">Posts</h2>
+        
 <div>
-    <table>
-        <tr>
-            <th colspan="2"><h2>Posts</h2></th>
-        </tr>
-        <t>
+    <table id = "postTable">
+        
+        <tr id = "tableHeader">
             <th>User</th>
             <th>Post</th>
-        </t>
+        </tr>
         <?php
             if($resultCheck > 0){
                 while ($row = mysqli_fetch_assoc($result)) {
                     ?>
                     <tr>
-                        <td><?php echo $row['name']; ?></td>
-                        <td><?php echo $row['description'] . "<br>"; ?></td>
+                        <td style="width: 20%;"><?php echo $row['name']; ?></td>
+                        <td style="width: 80%;"><?php echo $row['description'] . "<br>"; ?></td>
                     </tr>
                 <?php
                 }
