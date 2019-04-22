@@ -96,37 +96,6 @@
         </div>
 
     </header>
-
- 
-
-    <!--<div class="container">
-
-                <div class="header">
-
-            <div class="row">
-
-                <div class="float-right">
-
-                   
-
-                <a href="logout.php" id="logout" class="button primary" title="SIGN OUT">SIGN OUT</a>
-
-                </div>
-
-            </div>
-
-        </div>-->
-
-        <!--<div class="row">
-
-                   <div class="small-12 columns">
-
-                        <h1>New Post</h1>
-
-                    </div>
-
-        </div>-->
-
    
 
         <div class="err">

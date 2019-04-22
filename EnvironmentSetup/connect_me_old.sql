@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 22, 2019 at 08:33 PM
+-- Generation Time: Apr 21, 2019 at 05:34 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -32,8 +32,7 @@ CREATE TABLE `posts` (
   `postId` int(11) NOT NULL,
   `name` text NOT NULL,
   `description` text NOT NULL,
-  `userId` int(11) NOT NULL,
-  `username` text NOT NULL
+  `userId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
