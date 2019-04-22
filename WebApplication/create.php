@@ -14,7 +14,7 @@
    
     $itemDescription = "";
   
-    $error = "";
+    $error = "";P
     if ($_POST){
         if(!$_POST['itemName']){
           $error .= "A name for the item is required.<br>";
@@ -26,7 +26,18 @@
             $error .= "A description is required.<br>";
         }else{
             $itemDescription = $_POST['itemDescription'];
-        }   
+        } 
+        
+        
+        if($error != ""){
+            $error = '<div class="signin-error" style="color:red;"><strong>Error:</strong><br>'.$error.'</div>';
+          }else{
+              $query = "SELECT userId FROM users WHERE `email` = '".$testerID."'";
+              $result = mysqli_query($dbConnection, $query);
+              $row = mysqli_fetch_array($result);
+              $userID = $row['userId'];
+              $query = "INSERT INTO `posts` (`name`,  `description`, `userId`) VALUES ('".$itemName."',  '".$itemDescription."', '".$userID."')";
+          }
     }
 ?>
 <!doctype html>
