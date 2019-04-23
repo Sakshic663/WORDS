@@ -4,11 +4,12 @@ class DatabaseConnection{
 
     private static $instance = null;
     private $connection;
-    //mysql://b23b6b38e20261:52fc0339@us-cdbr-iron-east-02.cleardb.net/heroku_57e4adbd95c2fd5?reconnect=true
+    
+    //mysql://bf0a5ecdcdb511:ead6c1b0@us-cdbr-iron-east-02.cleardb.net/heroku_cfe18ac9d36bac2?reconnect=true
     private $host = 'us-cdbr-iron-east-02.cleardb.net';
-    private $username = 'b23b6b38e20261';
-    private $password = '52fc0339';
-    private $database = 'heroku_57e4adbd95c2fd5';
+    private $username = 'bf0a5ecdcdb511';
+    private $password = 'ead6c1b0';
+    private $database = 'heroku_cfe18ac9d36bac2';
 
     private function __construct(){
         $this->connection = mysqli_connect($this->host, $this->username, $this->password, $this->database);
