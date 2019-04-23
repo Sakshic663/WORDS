@@ -13,6 +13,10 @@ class DatabaseConnection{
 
     private function __construct(){
         $this->connection = mysqli_connect($this->host, $this->username, $this->password, $this->database);
+        if ($this->$connection->connect_error) {
+            die("Connection failed: " . $this->$connection->connect_error);
+        }
+        
     }
 
     public static function getInstance(){
