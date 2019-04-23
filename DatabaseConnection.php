@@ -2,8 +2,8 @@
 
 class DatabaseConnection{
 
-    private static $instance = null
-    private $connection;
+    private static $instance = null;
+    private $connection = null;
     
     
     private $host = 'localhost';
