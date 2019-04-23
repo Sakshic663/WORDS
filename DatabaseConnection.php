@@ -2,21 +2,17 @@
 
 class DatabaseConnection{
 
-    private static $instance = null;
+    private static $instance = null
     private $connection;
     
-    //mysql://bf0a5ecdcdb511:ead6c1b0@us-cdbr-iron-east-02.cleardb.net/heroku_cfe18ac9d36bac2?reconnect=true
-    private $host = 'us-cdbr-iron-east-02.cleardb.net';
-    private $username = 'bf0a5ecdcdb511';
-    private $password = 'ead6c1b0';
-    private $database = 'heroku_cfe18ac9d36bac2';
+    
+    private $host = 'localhost';
+    private $username = 'root';
+    private $password = '';
+    private $database = 'connect_me';
 
     private function __construct(){
-        $this->connection = mysqli_connect($this->host, $this->username, $this->password, $this->database);
-        if ($this->$connection->connect_error) {
-            die("Connection failed: " . $this->$connection->connect_error);
-        }
-        
+        $this->connection = mysqli_connect($this->host, $this->username, $this->password, $this->database);      
     }
 
     public static function getInstance(){
