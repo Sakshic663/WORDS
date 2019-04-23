@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WORDS</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet">
+	<style>
+		body, html {
+			height: 100%;
+		  margin: 0;
+		}
+		.hero-image {
+		  background-image: url("./background_header.jpg");
+		  background-color: #fff; 
+		  height: 100%;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		  opacity: 0.5;
+		}
+		.hero-text {
+		  text-align: center;
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  color: white;
+		}
+		.hero-text button {
+		  border: none;
+		  outline: 0;
+		  display: inline-block;
+		  padding: 10px 25px;
+		  color: black;
+		  background-color: #ddd;
+		  text-align: center;
+		  cursor: pointer;
+		}
+		.hero-text button:hover {
+		  background-color: #555;
+		  color: white;
+		}
+		#signup {
+			border-radius: 3px;
+			background-color: #fff;
+			border: 2px solid #000;
+			color: #000;
+		}
+		#signup:hover{
+			color: #fff;
+			background-color: #000;
+			border-radius: 3px;
+		}
+	</style>
+</head>
+<body>
+	<header class="header-basic">
+        <div class="header-limiter">
+            <h1><a href="#">ConnectMe</a></h1>
+            <nav>
+                <a href="#">About</a>
+                <a href="signin.php">Login</a>
+                <a href="signup.php">Register</a>
+                <a href="#">Dev Team</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero-image"></div>
+	<div class="hero-text">
+    		<h2 style="font-size:70px; color: #000;"><strong>WORDS</strong></h2>
+    			<p style="color: #000; font-size: 25px; font-family: 'Cedarville Cursive', cursive; z-index: 1;"><strong>Your safe heaven for sharing your masterpiece</strong></p>
+    			<a href="signup.php"><button id="signup">Sign up today</button></a>
+  		</div>
+
+</body>
+</html>
