@@ -23,7 +23,7 @@ $resultCheck = mysqli_num_rows($result);
 <body>
     <header class="header-basic">
         <div class="header-limiter">
-            <h1><a href="#">WORDS</a></h1>
+            <h1><a href="index.html">WORDS</a></h1>
             <nav>
                 <a href="logout.php" id="logout" class="button primary" title="SIGN OUT">SIGN OUT</a>
             </nav>
@@ -41,9 +41,7 @@ $resultCheck = mysqli_num_rows($result);
     <table id = "postTable" class="table table-striped" style="width: 80%;">
        <thead> 
             <tr id = "tableHeader" class="thead-dark">
-                <th>User</th>
-                <th>Title</th>
-                <th>Post</th>
+                <th>Posts</th>
             </tr>
         </thead>
         <tbody>
@@ -52,9 +50,11 @@ $resultCheck = mysqli_num_rows($result);
                     while ($row = mysqli_fetch_assoc($result)) {
                         ?>
                         <tr>
-                            <td style="width: 10%;"><?php echo $row['username']; ?></td>
-                            <td style="width: 20%;"><?php echo $row['name']; ?></td>
-                            <td style="width: 60%;"><?php echo $row['description'] . "<br>"; ?></td>
+                            <td>
+                                <h5 style="text-align: left;"><?php echo $row['name']; ?></h5>
+                                <p style="text-align: left;  border: 0.5px #000; border-bottom-style: solid"><?php echo $row['description'] . "<br>"; ?></p>
+                                <p style="text-align: right; font-size: 15px;"><?php echo  strtoupper($row['username']); ?></p>
+                            </td>
                         </tr>
                 <?php
                 }

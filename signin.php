@@ -98,9 +98,9 @@ session_start();
 
     <header class="header-basic">
         <div class="header-limiter">
-            <h1><a href="#">ConnectMe</a></h1>
+            <h1><a href="index.html">WORDS</a></h1>
             <nav>
-                <a href="#">About</a>
+                <a href="index.html">About</a>
                 <a href="#">Login</a>
                 <a href="signup.php">Register</a>
                 <a href="#">DevTeam</a>
@@ -116,10 +116,10 @@ session_start();
             <h2 style="color: #000;">Login</h2>
             <input type="text" value="" placeholder=" Enter email" name="email"/><br /><br />
             <input type="password" value="" placeholder=" Enter password" name="password"/><br /><br />
+            <input type="submit" value="Login" class="button primary" id="signin" /> <br />
             <div style="color: #000;">
                 <a href="./signup.php">Don't have an account?</a>
             </div>
-            <input type="submit" value="Login" class="button primary" id="signin" /> <br />
         </form>    
     </div>
 </body>
