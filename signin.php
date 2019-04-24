@@ -49,16 +49,49 @@ session_start();
   }
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- important for compatibility charset -->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body, html {
+          height: 100%;
+          margin: 0;
+        }
+        .hero-image {
+          background-image: url("./background_header.jpg");
+          background-color: #fff; 
+          height: 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          opacity: 0.5;
+        }
+        .signinForm {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+          opacity: 3;
+          background-color: #fff;
+        }
+        #signin {
+            border-radius: 3px;
+            background-color: #000;
+            color: #fff;
+        }
+        #signin:hover{
+            color: #000;
+            background-color: #fff;
+            border-radius: 3px;
+        }
+    </style>
 </head>
 
 <body >
@@ -75,35 +108,19 @@ session_start();
         </div>
     </header>
 
-
+    <div class="hero-image"></div>
 
     <div class="medium-5 small-12 columns form-container">
-
-        <!--<h2>Login</h2>-->
-
         <div class="err"><?php echo $error; ?></div>
-        <form method="post" id="app">
-            <h2>Login</h2>
-        <!--<label>
-            Your Email address-->
+        <form method="post" id="app" style="width: 30%; height: 50%; padding-top: 35px;" class="signinForm">
+            <h2 style="color: #000;">Login</h2>
             <input type="text" value="" placeholder="Enter email" name="email"/><br /><br />
-            <!--</label>-->
-
-            <!--<label>
-            Your Password-->
             <input type="password" value="" placeholder="Enter password" name="password"/><br /><br />
-            <!--</label>-->
-            <input type="submit" value="Login" class="button primary" /> <br /><br />
-            <div>
-                Don't have an account?
+            <div style="color: #000;">
+                <a href="./signup.php">Don't have an account?</a>
             </div>
-            <div>
-                <a href="./signup.php">
-                    <input type="button" value="Register" class="button primary" />
-                </a>                            
-            </div>
-        </form>
-        
+            <input type="submit" value="Login" class="button primary" id="signin" /> <br />
+        </form>    
     </div>
 </body>
 </html>
