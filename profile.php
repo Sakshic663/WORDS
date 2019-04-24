@@ -17,6 +17,7 @@ $resultCheck = mysqli_num_rows($result);
 <html>
 <head>
     <title>Profile Page</title>
+    <script src="logoutSuccess.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 
@@ -52,6 +53,9 @@ $resultCheck = mysqli_num_rows($result);
             </nav>
         </div>
     </header>
+    <script type="text/javascript">
+        logoutSuccess('logout');
+    </script>
 
         <div class="hero-image"></div>
         <div class="hero-image"></div>

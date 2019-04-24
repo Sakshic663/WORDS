@@ -48,6 +48,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <script src="logoutSuccess.js" type="text/javascript"></script>
     <title>Create New Post</title>
     <style>
         body, html {
@@ -102,6 +103,9 @@
             </nav>
         </div>
     </header>
+    <script type="text/javascript">
+        logoutSuccess('logout');
+    </script>
 
     <div class="hero-image"></div>
         <form method="post" enctype="multipart/form-data" id="newpost" class="createForm" style="margin-top: 5%;">
