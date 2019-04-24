@@ -1,7 +1,5 @@
 {
-    "config": {
-        "vendor-dir": "plugins"
-    },
+    
     "require": {
         "ext-mysqli": "*"
     }
