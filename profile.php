@@ -18,7 +18,7 @@ $resultCheck = mysqli_num_rows($result);
 <head>
     <title>Profile Page</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
