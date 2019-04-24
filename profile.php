@@ -16,9 +16,15 @@ $resultCheck = mysqli_num_rows($result);
 <!DOCTYPE html>
 <html>
 <head>
-<title> Profile Page</title>
-<link rel="stylesheet" type="text/css" href="styles.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Profile Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <header class="header-basic">
@@ -29,14 +35,9 @@ $resultCheck = mysqli_num_rows($result);
             </nav>
         </div>
     </header>
-
-<a href="./create.php">
+        <a href="./create.php">
         <img src="./plus.png" class="btn">
-    <!--<input type="button" value="" class="btn"/>-->
-</a>
-
-<!--<a href="logout.php" id="logout" class="button primary" title="SIGN OUT">SIGN OUT</a><br>-->
-        
+</a>        
 <div>
     <table id = "postTable" class="table table-striped" style="width: 80%;">
        <thead> 

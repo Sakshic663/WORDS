@@ -43,96 +43,80 @@
             }
     }
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<!doctype html>
-
-<html lang="en">
-
- 
-
 <head>
-
-    <!-- important for compatibility charset -->
-
     <meta charset="utf-8">
-
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-
     <title>Create New Post</title>
-
+    <style>
+        body, html {
+            height: 100%;
+          margin: 0;
+        }
+        .hero-image {
+          background-image: url("./create_background.jpg");
+          background-color: #fff; 
+          height: 80%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          opacity: 0.75;
+        }
+        .createForm {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: #fff;
+        }
+        #postCreate {
+            border-radius: 3px;
+            background-color: #fff;
+            border: 2px solid #000;
+            color: #000;
+            float: right;
+            margin-right: 6%;
+        }
+        #postCreate:hover{
+            color: #fff;
+            background-color: #000;
+            border-radius: 3px;
+        }
+    </style>
     <link rel="stylesheet" type="text/css" href="styles.css">
-
- 
-
- 
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="author" content="">
-
     <meta name="keywords" content="">
-
     <meta name="description" content="">
-
 </head>
-
- 
-
 <body class="inner-page">
-
- 
-
     <header class="header-basic">
-
         <div class="header-limiter">
-
             <h1><a href="#">WORDS</a></h1>
-
             <nav>
-
                 <a href="logout.php" id="logout" class="button primary" title="SIGN OUT">SIGN OUT</a>
-
             </nav>
-
         </div>
-
     </header>
-   
 
+    <div class="hero-image"></div>
         <div class="err">
-
             <?php echo $error; ?>
-
         </div>
 
-        <form method="post" enctype="multipart/form-data" id="newpost">
-
-            <img src="./createart.png" style="float: right;" id="createart">
-
+        <form method="post" enctype="multipart/form-data" id="newpost" class="createForm" style="margin-top: 3.25%;">
+            <!--<img src="./createart.png" style="float: right;" id="createart">-->
             <h1>New Post</h1>
-
             <label>
-
                 Title<br />
-
-                <input maxlength="100" type="text" id="nameItem" name="itemName" value="" placeholder="Enter title" />
-
-            </label><br /><br />
-
+                <input maxlength="100" type="text" id="nameItem" name="itemName" value="" placeholder=" Enter title" />
+            </label><br />
             <label>
-
                 Content<br />
-
-                <textarea name="itemDescription" placeholder="Enter content" id="contentItem" rows="20" cols="50" maxlength="200" style="overflow-y: scroll;"></textarea>
-
+                <textarea name="itemDescription" placeholder=" Enter content" id="contentItem" rows="13" cols="110" maxlength="300" style="overflow-y: scroll;"></textarea>
             </label> <br>
-
             <input type="submit" id='postCreate' value="Create Post" class="button primary" />
-
         </form>
-
- 
-
-</body>
-
+    </body>
 </html>
