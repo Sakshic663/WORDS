@@ -24,6 +24,21 @@ $resultCheck = mysqli_num_rows($result);
             height: 100%;
             margin: 0;
         }
+        .hero-image {
+          background-image: url("./create_background.jpg");
+          background-color: #fff; 
+          height: 80%;
+          background-repeat: repeat-y;
+          background-size: cover;
+          opacity: 0.75;
+        }
+        .table {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -35,11 +50,15 @@ $resultCheck = mysqli_num_rows($result);
             </nav>
         </div>
     </header>
+
+        <div class="hero-image"></div>
+        <div class="hero-image"></div>
+
         <a href="./create.php">
         <img src="./plus.png" class="btn">
 </a>        
 <div>
-    <table id = "postTable" class="table table-striped" style="width: 80%;">
+    <table id = "postTable" class="table table-striped" style="width: 80%; margin-top: 30%;">
        <thead> 
             <tr id = "tableHeader" class="thead-dark">
                 <th>Posts</th>
