@@ -120,7 +120,7 @@ else{
                 <a href="index.html">About</a>
                 <a href="signin.php">Login</a>
                 <a href="#">Register</a>
-                <a href="#">DevTeam</a>
+                <a href="devTeam.html">DevTeam</a>
             </nav>
         </div>
     </header>

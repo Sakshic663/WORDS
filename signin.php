@@ -105,7 +105,7 @@ session_start();
                 <a href="index.html">About</a>
                 <a href="#">Login</a>
                 <a href="signup.php">Register</a>
-                <a href="#">DevTeam</a>
+                <a href="devTeam.html">DevTeam</a>
             </nav>
         </div>
     </header>
