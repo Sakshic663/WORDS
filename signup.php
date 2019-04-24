@@ -118,7 +118,7 @@ else{
                 <a href="index.html">About</a>
                 <a href="signin.php">Login</a>
                 <a href="#">Register</a>
-                <a href="#">Dev Team</a>
+                <a href="#">DevTeam</a>
             </nav>
         </div>
     </header>
@@ -132,10 +132,10 @@ else{
            <!--<div class="medium-5 small-12 medium-offset-1 columns form-container">-->
             <form method="post" id="app" class="signupForm" style="margin-top: 5%; padding: 50px; width: 30%; height: 65%;">
                 <h2 style="color: #000;">Register</h2>
-                <input type="text" name="username" value="" placeholder="Enter username" /><br /><br />
-                <input type="text" name="email" value="" placeholder="Enter email" /><br /><br />
-                <input type="password" name="password" value="" placeholder="Enter password" /><br><br />
-                <input type="password" name="confirmPassword" value="" placeholder="Confirm password" /><br /><br />
+                <input type="text" name="username" value="" placeholder=" Enter username" /><br /><br />
+                <input type="text" name="email" value="" placeholder=" Enter email" /><br /><br />
+                <input type="password" name="password" value="" placeholder=" Enter password" /><br><br />
+                <input type="password" name="confirmPassword" value="" placeholder=" Confirm password" /><br /><br />
                 <!--<div class="err"><?php echo $error; ?></div>-->
                 <input type="submit" value="Sign Up" class="button primary" id="signup" style="width: 30%;" /><br />
                 <a href="signin.php">Already have an account?</a>

@@ -103,7 +103,7 @@ session_start();
                 <a href="#">About</a>
                 <a href="#">Login</a>
                 <a href="signup.php">Register</a>
-                <a href="#">Dev Team</a>
+                <a href="#">DevTeam</a>
             </nav>
         </div>
     </header>
@@ -114,8 +114,8 @@ session_start();
         <div class="err"><?php echo $error; ?></div>
         <form method="post" id="app" style="width: 30%; height: 50%; padding-top: 35px;" class="signinForm">
             <h2 style="color: #000;">Login</h2>
-            <input type="text" value="" placeholder="Enter email" name="email"/><br /><br />
-            <input type="password" value="" placeholder="Enter password" name="password"/><br /><br />
+            <input type="text" value="" placeholder=" Enter email" name="email"/><br /><br />
+            <input type="password" value="" placeholder=" Enter password" name="password"/><br /><br />
             <div style="color: #000;">
                 <a href="./signup.php">Don't have an account?</a>
             </div>
@@ -124,4 +124,3 @@ session_start();
     </div>
 </body>
 </html>
-

@@ -18,6 +18,7 @@ $resultCheck = mysqli_num_rows($result);
 <head>
 <title> Profile Page</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     <header class="header-basic">
@@ -35,32 +36,33 @@ $resultCheck = mysqli_num_rows($result);
 </a>
 
 <!--<a href="logout.php" id="logout" class="button primary" title="SIGN OUT">SIGN OUT</a><br>-->
-
-            <h2 style="text-align: center;">Posts</h2>
         
 <div>
-    <table id = "postTable">
-        
-        <tr id = "tableHeader">
-            <th>User</th>
-            <th>Post Name</th>
-            <th>Post</th>
-        </tr>
-        <?php
-            if($resultCheck > 0){
-                while ($row = mysqli_fetch_assoc($result)) {
-                    ?>
-                    <tr>
-                        <td style="width: 10%;"><?php echo $row['username']; ?></td>
-                        <td style="width: 70%;"><?php echo $row['name']; ?></td>
-                        <td style="width: 80%;"><?php echo $row['description'] . "<br>"; ?></td>
-                    </tr>
+    <table id = "postTable" class="table table-striped" style="width: 80%;">
+       <thead> 
+            <tr id = "tableHeader" class="thead-dark">
+                <th>User</th>
+                <th>Title</th>
+                <th>Post</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                if($resultCheck > 0){
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        ?>
+                        <tr>
+                            <td style="width: 10%;"><?php echo $row['username']; ?></td>
+                            <td style="width: 20%;"><?php echo $row['name']; ?></td>
+                            <td style="width: 60%;"><?php echo $row['description'] . "<br>"; ?></td>
+                        </tr>
                 <?php
                 }
                 ?>
             <?php
         }
         ?>
+        </tbody>
     </table>
 </div>
 </body>
