@@ -101,13 +101,11 @@
     </header>
 
     <div class="hero-image"></div>
-        <div class="err">
-            <?php echo $error; ?>
-        </div>
-
-        <form method="post" enctype="multipart/form-data" id="newpost" class="createForm" style="margin-top: 3.25%;">
-            <!--<img src="./createart.png" style="float: right;" id="createart">-->
+        <form method="post" enctype="multipart/form-data" id="newpost" class="createForm" style="margin-top: 10%;">
             <h1>New Post</h1>
+             <div class="err" style="margin-left: 5px;">
+                <?php echo $error; ?>
+            </div>
             <label>
                 Title<br />
                 <input maxlength="100" type="text" id="nameItem" name="itemName" value="" placeholder=" Enter title" />

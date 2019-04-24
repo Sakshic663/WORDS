@@ -111,12 +111,12 @@ session_start();
     <div class="hero-image"></div>
 
     <div class="medium-5 small-12 columns form-container">
-        <div class="err"><?php echo $error; ?></div>
-        <form method="post" id="app" style="width: 30%; height: 50%; padding-top: 35px;" class="signinForm">
+        <form method="post" id="app" style="width: 30%; height: 55%; padding-top: 35px;" class="signinForm">
             <h2 style="color: #000;">Login</h2>
             <input type="text" value="" placeholder=" Enter email" name="email"/><br /><br />
             <input type="password" value="" placeholder=" Enter password" name="password"/><br /><br />
             <input type="submit" value="Login" class="button primary" id="signin" /> <br />
+            <div class="err"><?php echo $error; ?></div>
             <div style="color: #000;">
                 <a href="./signup.php">Don't have an account?</a>
             </div>
