@@ -44,7 +44,7 @@ $resultCheck = mysqli_num_rows($result);
 <body>
     <header class="header-basic">
         <div class="header-limiter">
-            <h1><a href="index.html">WORDS</a></h1>
+            <h1 style="color: #fff;">WORDS</h1>
             <nav>
                 <a href="logout.php" id="logout" class="button primary" title="SIGN OUT">SIGN OUT</a>
             </nav>

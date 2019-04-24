@@ -98,7 +98,7 @@ session_start();
 
     <header class="header-basic">
         <div class="header-limiter">
-            <h1><a href="index.html">WORDS</a></h1>
+            <h1 style="color: #fff;">WORDS</h1>
             <nav>
                 <a href="index.html">About</a>
                 <a href="#">Login</a>

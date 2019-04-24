@@ -93,15 +93,16 @@
 <body class="inner-page">
     <header class="header-basic">
         <div class="header-limiter">
-            <h1><a href="#">WORDS</a></h1>
+            <h1 style="color: #fff;">WORDS</h1>
             <nav>
+                <a href="profile.php">Dashboard</a>
                 <a href="logout.php" id="logout" class="button primary" title="SIGN OUT">SIGN OUT</a>
             </nav>
         </div>
     </header>
 
     <div class="hero-image"></div>
-        <form method="post" enctype="multipart/form-data" id="newpost" class="createForm" style="margin-top: 10%;">
+        <form method="post" enctype="multipart/form-data" id="newpost" class="createForm" style="margin-top: 5%;">
             <h1>New Post</h1>
              <div class="err" style="margin-left: 5px;">
                 <?php echo $error; ?>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The DevTeam</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+		body {
+			height: 100%;
+			margin: 0;
+		}
+		.row {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+          opacity: 3;
+          background-color: #fff;
+        }
+        #bio {
+			border-radius: 3px;
+			background-color: #fff;
+			border: 2px solid #000;
+			color: #000;
+		}
+		#bio:hover{
+			color: #fff;
+			background-color: #000;
+			border-radius: 3px;
+		}
+	</style>
+</head>
+<body>
+	<header class="header-basic">
+        <div class="header-limiter">
+            <h1 style="color: #fff;">WORDS</h1>
+            <nav>
+                <a href="index.html">About</a>
+                <a href="signin.php">Login</a>
+                <a href="signup.php">Register</a>
+                <a href="#">DevTeam</a>
+            </nav>
+        </div>
+    </header>
+
+    <h1 style="text-align: center;">Meet The Team</h1>
+
+    <div class="row" style="margin-top: 2%; color: #000; text-align: center;">
+  		<div class="card" style="width: 18rem; margin-right: 10px; ">
+  			<img class="card-img-top" src="./sakshi_one.png" alt="Card image cap">
+  			<div class="card-body">
+    			<h5 class="card-title">Sakshi Choudhary</h5>
+    			<p class="card-text">Backend Developer<br /><a href="mailto:choudh11@purdue.edu" style="text-align: center;">choudh11@purdue.edu</a></p>
+    			<a href="https://www.linkedin.com/in/sakshichoudhary7/"><button id="bio">Profile</button></a>
+  			</div>
+		</div>
+
+  		<div class="card" style="width: 18rem;">
+  			<img class="card-img-top" src="./soha.jpeg" alt="Card image cap">
+  			<div class="card-body">
+    			<h5 class="card-title">Soha Parvez</h5>
+    			<p class="card-text">Frontend Developer<br/><a href="mailto:parvezs@purdue.edu" style="text-align: center;">parvezs@purdue.edu</a></p>
+    			<a href="http://sohaparvez.me/"><button id="bio">Profile</button></a>
+  			</div>
+		</div>
+</div>
+
+</body>
+</html>
