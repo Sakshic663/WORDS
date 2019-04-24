@@ -58,7 +58,6 @@ $resultCheck = mysqli_num_rows($result);
     </script>
 
         <div class="hero-image"></div>
-        <div class="hero-image"></div>
 
         <a href="./create.php">
         <img src="./plus.png" class="btn">
