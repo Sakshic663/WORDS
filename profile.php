@@ -63,7 +63,7 @@ $resultCheck = mysqli_num_rows($result);
         <img src="./plus.png" class="btn">
 </a>        
 <div>
-    <table id = "postTable" class="table table-striped" style="width: 80%; margin-top: 30%;">
+    <table id = "postTable" class="table table-striped" style="width: 80%;">
        <thead> 
             <tr id = "tableHeader" class="thead-dark">
                 <th>Posts</th>
